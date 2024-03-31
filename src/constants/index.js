@@ -1,6 +1,7 @@
 export const architechtures = [
     { 
-        name: 'layers', 
+        name: 'layers',
+        link: 'architechtures/layers',
         description: 'lorem ipsum dolor', 
         pros: ['pro 1', 'pro 2', 'pro 3'], 
         cons: ['con 1', 'con 2', 'con 3'], 
