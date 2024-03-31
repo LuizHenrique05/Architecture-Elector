@@ -8,6 +8,9 @@ function Topbar() {
       <Link href="/">
         <h1>Architechtures Elector</h1>
       </Link>
+      <Link href="/architechtures">
+        <h2>List of Architechtures</h2>
+      </Link>
     </nav>
   )
 }
