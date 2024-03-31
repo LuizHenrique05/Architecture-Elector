@@ -1,0 +1,100 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form label {
+    margin: 1.5em 0 .7em 0;
+    color: #333;
+}
+
+.form input[type=text] {
+    height: 25px;
+    width: 100%;
+    max-width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input[type=text]:focus {
+    outline: none;
+    border-color: #ccc;
+    box-shadow: 0 0 10px rgba(204, 204, 204, 0.8);
+}
+
+.form select {
+    height: 38px;
+    width: 100%;
+    max-width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form select:focus {
+    outline: none;
+    border-color: #ccc; 
+    box-shadow: 0 0 5px rgba(204, 204, 204, 0.8); 
+}
+
+.all__checkbox > div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.all__checkbox > div label {
+    margin: 0;
+}
+
+.form input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+.submit__button {
+    margin: 1em 0 0 0;
+    padding: .7em 1.5em;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.submit__button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+  
+.submit__button:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.error {
+    height: 35px;
+    width: 570px;
+    max-width: 570px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 1em;
+    border-radius: 5px;
+}
