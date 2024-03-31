@@ -7,7 +7,7 @@ function Topbar() {
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <h1>Architecture Elector</h1>
+        <h1>Architechtures Elector</h1>
       </Link>
     </nav>
   )
