@@ -1,7 +1,16 @@
+.list__architechtures {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.list__architechtures h2 {
+    margin-bottom: 1em;
+}
+
 .list { 
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .list li { 

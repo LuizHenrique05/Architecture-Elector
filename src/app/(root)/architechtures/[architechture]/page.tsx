@@ -2,6 +2,7 @@ import { fetchArchitechture } from '@/lib/actions/architechture.action'
 import { redirect } from 'next/navigation'
 
 import styles from './page.module.css'
+import Link from 'next/link'
 
 export default async function Architechture({ params }: { params: { architechture: string } }) {
   const architechtureInfo: any = await fetchArchitechture(params.architechture)
@@ -53,6 +54,8 @@ export default async function Architechture({ params }: { params: { architechtur
         <h3>Conclusion</h3>
         <p>{architechtureInfo.conclusion}</p>
       </section>
+
+      <Link href='/architechtures'>&larr; Back to all architechtures</Link>
     </section>
   )
 }
