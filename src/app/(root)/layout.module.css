@@ -6,9 +6,12 @@
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
-    height: 1vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .html body main {
     padding: 2em;
+    flex: 1;
 }

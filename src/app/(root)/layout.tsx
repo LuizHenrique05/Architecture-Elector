@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import Topbar from '@/components/shareds/Topbar'
+import Bottombar from '@/components/shareds/Bottombar'
 
 import styles from './layout.module.css'
 
@@ -27,6 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </section>
 
           </main>
+
+          <Bottombar />
         </body>
       </html>
   )
