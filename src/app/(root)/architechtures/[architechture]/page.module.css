@@ -1,0 +1,80 @@
+.architechture__infos {
+    max-width: 600px;
+    width: 90%;
+    margin: 1em auto;
+}
+
+.architechture__infos h1 {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.architechture__infos h3 {
+    font-size: 16px;
+    margin: 1.5em 0 1em 0;
+}
+
+.architechture__infos p {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5;
+    text-indent: 20px;
+}
+
+.pros__cons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.pros__cons ul,
+.use__cases ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pros__cons ul li, 
+.use__cases ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5;
+    text-indent: 20px;
+}
+
+.pros__cons ul li:before {
+    content: "\2713";
+    font-size: 20px; 
+    color: #4CAF50;
+    position: absolute; 
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.pros__cons div:last-child ul li:before {
+    content: "\2717";
+    font-size: 20px;
+    color: #FF0000; 
+    position: absolute; 
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.use__cases ul li {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.use__cases ul li:hover {
+    background-color: #eaeaea;
+}
