@@ -100,7 +100,7 @@ export default function SpecsForm() {
         </select>
 
         <label htmlFor="resilience_or_total_uptime">
-          4. Does your project require resilience or total uptime?* (Don't mark if your project doesn't need any).
+          4. Does your project require resilience or total uptime? (Don't mark if your project doesn't need any).
         </label>
         <div className={styles.all__checkbox}>  
           <div>
