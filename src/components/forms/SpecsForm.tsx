@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, ChangeEvent, useEffect } from 'react'
+import localforage from "localforage"
 
 import styles from './SpecsForm.module.css'
 
@@ -36,7 +37,19 @@ export default function SpecsForm() {
       }, 3000)
       return false
     }
-    
+
+    const data = {
+      complexity: complexity,
+      deadline: deadline,
+      scalability: scalability,
+      resilience: resilience,
+      total_uptime: total_uptime,
+      devops: devops,
+      tecnicalUsers: tecnicalUsers
+    }
+
+    localforage.setItem('current_project_informations', data)
+  
     return true
   }
 
@@ -59,7 +72,7 @@ export default function SpecsForm() {
 
   return (
     <>
-      <form className={styles.form}>
+      <form className={styles.form} action=''>
         <label htmlFor="complexity">
           1. On a scale of 0 to 10, how would you describe the complexity of your project?* (Comma not allowed).
         </label>
