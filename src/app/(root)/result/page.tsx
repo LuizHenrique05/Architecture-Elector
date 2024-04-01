@@ -58,11 +58,11 @@ export default function Result() {
 
     return (
         <>
-            {result &&
+            {result ?
                 <ArchitectureCard 
                     architecturesResult={result}
                     localforage={localforageData as projectData} />
-            }
+            : <p style={{textAlign: 'center'}}>Submit the form to elect top architectures to use on your project.</p>}
         </>
     )
 }
