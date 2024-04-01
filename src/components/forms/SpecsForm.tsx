@@ -49,8 +49,8 @@ export default function SpecsForm() {
     }
 
     localforage.setItem('current_project_informations', data)
-  
-    return true
+
+    window.location.href = '/result'
   }
 
   const isAllInputsFilled = () => {
@@ -72,7 +72,7 @@ export default function SpecsForm() {
 
   return (
     <>
-      <form className={styles.form} action=''>
+      <form className={styles.form}>
         <label htmlFor="complexity">
           1. On a scale of 0 to 10, how would you describe the complexity of your project?* (Comma not allowed).
         </label>
