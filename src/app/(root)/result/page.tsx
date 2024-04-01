@@ -1,6 +1,9 @@
+'use client'
+
 import localforage from "localforage"
 import { fetchArchitechtureResult } from '@/lib/actions/architechture.action'
 import ArchitechtureCard from '@/components/architechture/ArchitechtureCard'
+import { useEffect, useState } from "react"
 
 interface projectData {
     complexity: string,
@@ -12,16 +15,53 @@ interface projectData {
     total_uptime: boolean
 }
 
-export default async function Result() {
-    const localforage_data = await localforage.getItem('current_project_informations')
-    const result = await fetchArchitechtureResult(localforage_data as projectData)
+interface ResultsData {
+    name: string;
+    link: string;
+    description: string;
+    pros: string[]; 
+    cons: string[]; 
+    cases: string[];
+    conclusion: string;
+    history: string;
+    answers: {
+        complexity: string;
+        deadline: string;
+        scalability: string;
+        resilience_or_total_uptime: string;
+        devops: string;
+        tecnicalUsers: string;
+    }
+}
+
+export default function Result() {
+    const [localforageData, setLocalforageData] = useState<projectData>({
+        complexity: '',
+        deadline: '',
+        devops: '',
+        resilience: false,
+        scalability: '',
+        tecnicalUsers: '',
+        total_uptime: false
+    })
+    const [result, setResult] = useState<ResultsData[]>();
+
+    useEffect(() => {
+        localforage.getItem<projectData>('current_project_informations')
+          .then((data: projectData | null) => {
+            if (data) {
+              setLocalforageData(data);
+              fetchArchitechtureResult(data).then(result => setResult(result));
+            }
+          });
+      }, []);
 
     return (
         <>
             {result ? 
                 <ArchitechtureCard 
                     architechturesResult={result}
-                    localforage={localforage_data as projectData}
+                    localforage={localforageData as projectData}
                 /> :
                 <p>Nenhum resultado encontrato</p>
             }
