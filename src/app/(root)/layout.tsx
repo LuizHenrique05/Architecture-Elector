@@ -10,8 +10,8 @@ import FloatingResults from '@/components/shareds/FloatingResults'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'The Best Architechtures for Your Software',
-  description: 'Search with this app for the best architechture for your software.',
+  title: 'The Best Architectures for Your Software',
+  description: 'Search with this app for the best architecture for your software.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

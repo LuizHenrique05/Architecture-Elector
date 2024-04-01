@@ -1,32 +1,32 @@
-import { fetchArchitechture } from '@/lib/actions/architechture.action'
+import { fetchArchitecture } from '@/lib/actions/architecture.action'
 import { redirect } from 'next/navigation'
 
 import styles from './page.module.css'
 import Link from 'next/link'
 
-export default async function Architechture({ params }: { params: { architechture: string } }) {
-  const architechtureInfo: any = await fetchArchitechture(params.architechture)
+export default async function Architecture({ params }: { params: { architecture: string } }) {
+  const architectureInfo: any = await fetchArchitecture(params.architecture)
 
-  if (architechtureInfo.length == 0) redirect('/architechtures')
+  if (architectureInfo.length == 0) redirect('/architectures')
   return (
-    <section className={styles.architechture__infos}>
-      <h1>Architechture - {architechtureInfo.name}</h1>
+    <section className={styles.architecture__infos}>
+      <h1>Architecture - {architectureInfo.name}</h1>
 
       <section>
         <h3>Explanation and Behavior</h3>
-        <p>{architechtureInfo.description}</p>
+        <p>{architectureInfo.description}</p>
       </section>
 
       <section>
         <h3>History</h3>
-        <p>{architechtureInfo.history}</p>
+        <p>{architectureInfo.history}</p>
       </section>
 
       <section className={styles.pros__cons}>
         <div>
           <h3>Pros</h3>
           <ul>
-            {architechtureInfo.pros.map((pro: string, index: any) => {
+            {architectureInfo.pros.map((pro: string, index: any) => {
               return <li key={index}>{pro}</li>
             })}
           </ul>
@@ -34,7 +34,7 @@ export default async function Architechture({ params }: { params: { architechtur
         <div>
           <h3>Cons</h3>
           <ul>
-            {architechtureInfo.cons.map((con: string, index: any) => {
+            {architectureInfo.cons.map((con: string, index: any) => {
               return <li key={index}>{con}</li>
             })}
           </ul>
@@ -44,7 +44,7 @@ export default async function Architechture({ params }: { params: { architechtur
       <section className={styles.use__cases}>
         <h3>Examples of Use Cases</h3>
         <ul>
-          {architechtureInfo.cases.map((cases: string, index: any) => {
+          {architectureInfo.cases.map((cases: string, index: any) => {
             return <li key={index}>{index + 1}. {cases}</li>
           })}
         </ul>
@@ -52,10 +52,10 @@ export default async function Architechture({ params }: { params: { architechtur
 
       <section>
         <h3>Conclusion</h3>
-        <p>{architechtureInfo.conclusion}</p>
+        <p>{architectureInfo.conclusion}</p>
       </section>
 
-      <Link href='/architechtures'>&larr; Back to all architechtures</Link>
+      <Link href='/architectures'>&larr; Back to all architectures</Link>
     </section>
   )
 }

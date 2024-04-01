@@ -1,7 +1,7 @@
-export const architechtures = [
+export const architectures = [
     { 
         name: 'layers',
-        link: 'architechtures/layers',
+        link: 'architectures/layers',
         description: 'The n-tier architecture, often referred to as multi-tier architecture, divides an application into multiple layers, each serving a specific purpose. It typically consists of a presentation tier, responsible for user interaction; a business logic tier, managing application logic; and a data tier, handling data storage and retrieval. This approach promotes modularity, scalability, and maintainability by separating concerns and facilitating code reuse. Each tier operates independently, enhancing flexibility and facilitating distributed computing. Overall, the n-tier architecture offers a structured framework for building robust and scalable software systems.', 
         pros: ['Separation of Concerns.', 'Modularity.', 'Scalability.', 'Code Reusability.', 'Technological Flexibility.'], 
         cons: ['Complexity.', 'Communication Overhead.', 'Unwanted Coupling.', 'Over-Engineering.', 'Maintenance Challenges.'], 

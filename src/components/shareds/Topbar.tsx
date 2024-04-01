@@ -6,10 +6,10 @@ function Topbar() {
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <h1>Architechtures Elector</h1>
+        <h1>Architectures Elector</h1>
       </Link>
-      <Link href="/architechtures">
-        <h2>List of Architechtures</h2>
+      <Link href="/architectures">
+        <h2>List of Architectures</h2>
       </Link>
     </nav>
   )

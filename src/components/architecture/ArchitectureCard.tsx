@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from './ArchitechtureCard.module.css'
+import styles from './ArchitectureCard.module.css'
 
 interface ResultsData {
     name: string;
@@ -30,26 +30,27 @@ interface ProjectData {
     total_uptime: boolean;
 }
 
-interface ArchitechtureCardProps {
-    architechturesResult: ResultsData[];
+interface ArchitectureCardProps {
+    architecturesResult: ResultsData[];
     localforage: ProjectData;
 }
 
-const ArchitechtureCard: React.FC<ArchitechtureCardProps> = ({ architechturesResult, localforage }) => {
+const ArchitectureCard: React.FC<ArchitectureCardProps> = ({ architecturesResult, localforage }) => {
     return (
         <section className={styles.result}>
-            <h3>Top Architechtures for your project</h3>
+            <h3>Top Architectures for your project</h3>
             <ul className={styles.top__list}>
-                {architechturesResult.map((architechtureResult, index: number) => {
-                    return (
-                        <li key={index}>
-                            <Link target='_blank' href={architechtureResult.link}>
-                                {index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : ''}
-                                {index + 1}. {architechtureResult.name}. (Read all about this architechture)
-                            </Link>
-                        </li>
-                    )
-                })}
+                {architecturesResult.length > 0 ? 
+                    architecturesResult.map((architectureResult, index: number) => {
+                        return (
+                            <li key={index}>
+                                <Link target='_blank' href={architectureResult.link}>
+                                    {index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : ''}
+                                    {index + 1}. {architectureResult.name}. (Read all about this architecture)
+                                </Link>
+                            </li>
+                        )
+                }) : <p>Architectures not found for these specifications...</p>}
             </ul>
 
             <div>
@@ -85,4 +86,4 @@ const ArchitechtureCard: React.FC<ArchitechtureCardProps> = ({ architechturesRes
     )
 }
 
-export default ArchitechtureCard
+export default ArchitectureCard

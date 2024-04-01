@@ -1,8 +1,8 @@
 'use client'
 
 import localforage from "localforage"
-import { fetchArchitechtureResult } from '@/lib/actions/architechture.action'
-import ArchitechtureCard from '@/components/architechture/ArchitechtureCard'
+import { fetchArchitectureResult } from '@/lib/actions/architecture.action'
+import ArchitectureCard from '@/components/architecture/ArchitectureCard'
 import { useEffect, useState } from "react"
 
 interface projectData {
@@ -51,7 +51,7 @@ export default function Result() {
           .then((data: projectData | null) => {
             if (data) {
               setLocalforageData(data);
-              fetchArchitechtureResult(data).then(result => setResult(result));
+              fetchArchitectureResult(data).then(result => setResult(result));
             }
           });
       }, []);
@@ -59,8 +59,8 @@ export default function Result() {
     return (
         <>
             {result &&
-                <ArchitechtureCard 
-                    architechturesResult={result}
+                <ArchitectureCard 
+                    architecturesResult={result}
                     localforage={localforageData as projectData} />
             }
         </>

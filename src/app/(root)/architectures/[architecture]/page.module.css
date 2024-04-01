@@ -1,25 +1,25 @@
-.architechture__infos {
+.architecture__infos {
     max-width: 600px;
     width: 90%;
     margin: 1em auto;
 }
 
-.architechture__infos > a {
+.architecture__infos > a {
     display: block;
     margin-bottom: 1em;
 }
 
-.architechture__infos h1 {
+.architecture__infos h1 {
     font-size: 20px;
     text-transform: capitalize;
 }
 
-.architechture__infos h3 {
+.architecture__infos h3 {
     font-size: 16px;
     margin: 1.5em 0 1em 0;
 }
 
-.architechture__infos p {
+.architecture__infos p {
     text-align: justify;
     font-size: 14px;
     line-height: 1.5;

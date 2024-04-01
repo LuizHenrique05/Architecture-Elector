@@ -1,15 +1,15 @@
-.list__architechtures {
+.list__architectures {
     max-width: 600px;
     width: 90%;
     margin: 0 auto;
 }
 
-.list__architechtures > a {
+.list__architectures > a {
     display: block;
     margin-bottom: 1em;
 }
 
-.list__architechtures h2 {
+.list__architectures h2 {
     margin-bottom: 1em;
 }
 

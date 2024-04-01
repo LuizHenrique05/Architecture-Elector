@@ -1,15 +1,15 @@
 'use server'
 
-import { architechtures } from '@/constants'
+import { architectures } from '@/constants'
 
-export async function fetchArchitechture(architechtureName: string) {
-    if (!architechtureName) return []
+export async function fetchArchitecture(architectureName: string) {
+    if (!architectureName) return []
 
-    return architechtures.find(architechture => architechture.name.trim().toLowerCase() === architechtureName.trim().toLowerCase())
+    return architectures.find(architecture => architecture.name.trim().toLowerCase() === architectureName.trim().toLowerCase())
 }
 
-export async function fetchArchitechtures() {
-    return architechtures
+export async function fetchArchitectures() {
+    return architectures
 }
 
 interface projectData {
@@ -41,19 +41,19 @@ function orderResilienceTotaluptime(resilience: boolean, total_uptime: boolean) 
     else return total_uptime ? 'total_uptime' : 'none'
 }
 
-export async function fetchArchitechtureResult({ complexity, deadline, devops, resilience, scalability, tecnicalUsers, total_uptime }: projectData) {
+export async function fetchArchitectureResult({ complexity, deadline, devops, resilience, scalability, tecnicalUsers, total_uptime }: projectData) {
     const devops_ordered = orderDevops(devops)
     const scalability_ordered = orderScalability(scalability)
     const resilience_or_total_uptime = orderResilienceTotaluptime(resilience, total_uptime)
 
-    const filteredData = architechtures.filter(architechture => {
+    const filteredData = architectures.filter(architecture => {
         return (
-            parseFloat(complexity) <= parseFloat(architechture.answers.complexity) &&
-            parseFloat(deadline) <= parseFloat(architechture.answers.deadline) &&
-            scalability_ordered.includes(architechture.answers.scalability) &&
-            resilience_or_total_uptime === architechture.answers.resilience_or_total_uptime &&
-            devops_ordered.includes(architechture.answers.devops) &&
-            tecnicalUsers === architechture.answers.tecnicalUsers
+            parseFloat(complexity) <= parseFloat(architecture.answers.complexity) &&
+            parseFloat(deadline) <= parseFloat(architecture.answers.deadline) &&
+            scalability_ordered.includes(architecture.answers.scalability) &&
+            resilience_or_total_uptime === architecture.answers.resilience_or_total_uptime &&
+            devops_ordered.includes(architecture.answers.devops) &&
+            tecnicalUsers === architecture.answers.tecnicalUsers
         )
     })
 
