@@ -58,12 +58,10 @@ export default function Result() {
 
     return (
         <>
-            {result ? 
+            {result &&
                 <ArchitechtureCard 
                     architechturesResult={result}
-                    localforage={localforageData as projectData}
-                /> :
-                <p>Nenhum resultado encontrato</p>
+                    localforage={localforageData as projectData} />
             }
         </>
     )
