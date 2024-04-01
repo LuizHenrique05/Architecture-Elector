@@ -15,3 +15,10 @@
     padding: 2em;
     flex: 1;
 }
+
+@media (max-width: 481px) {
+    .html body main {
+        padding: 1em;
+        flex: 1;
+    }
+}

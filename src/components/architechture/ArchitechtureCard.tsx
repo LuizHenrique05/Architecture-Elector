@@ -79,6 +79,8 @@ const ArchitechtureCard: React.FC<ArchitechtureCardProps> = ({ architechturesRes
                     <li style={{ color: localforage.tecnicalUsers == 'yes' ? 'green' : localforage.tecnicalUsers == 'no' ? 'red' : '' }}><span>It's made for tecnical users:</span> {localforage.tecnicalUsers}</li>
                 </ul>
             </div>
+
+            <Link href='/'>&larr; Back to elector form</Link>
         </ section>
     )
 }

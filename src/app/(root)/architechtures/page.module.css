@@ -4,6 +4,11 @@
     margin: 0 auto;
 }
 
+.list__architechtures > a {
+    display: block;
+    margin-bottom: 1em;
+}
+
 .list__architechtures h2 {
     margin-bottom: 1em;
 }

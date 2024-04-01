@@ -4,6 +4,11 @@
     margin: 1em auto;
 }
 
+.architechture__infos > a {
+    display: block;
+    margin-bottom: 1em;
+}
+
 .architechture__infos h1 {
     font-size: 20px;
     text-transform: capitalize;

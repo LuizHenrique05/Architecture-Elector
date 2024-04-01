@@ -26,3 +26,10 @@
 .nav a:hover {
     color: #555;
 }
+
+@media (max-width: 481px) {
+    .footer h4{
+        text-align: center;
+        line-height: 1.5;
+    }
+}

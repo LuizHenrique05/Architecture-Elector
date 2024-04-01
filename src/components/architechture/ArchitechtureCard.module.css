@@ -4,11 +4,17 @@
     margin: 0 auto;
 }
 
+.result > a {
+    display: block;
+    margin-bottom: 1em;
+}
+
 .result p,
 .result li {
     font-size: 14px;
     text-align: justify;
     text-indent: 20px;
+    line-height: 1.5;
 }
 
 .result li { 

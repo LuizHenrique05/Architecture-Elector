@@ -26,3 +26,13 @@
 .nav a h2:hover {
     color: #555;
 }
+
+@media (max-width: 481px) {
+    .nav a h1 {
+        font-size: 18px;
+    } 
+
+    .nav a h2 {
+        font-size: 12px;
+    } 
+}
