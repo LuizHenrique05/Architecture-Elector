@@ -9,12 +9,12 @@ export const architechtures = [
         conclusion: "The n-tier layered architecture offers a structured approach to software development, providing clear separation of concerns and promoting scalability and maintainability. You should use this architecture when you require a modular and scalable system, with well-defined boundaries between presentation, business logic, and data access layers. This architecture is particularly suitable for projects with evolving requirements and long-term sustainability goals. However, you should not use this architecture when simplicity and rapid development are top priorities. The added complexity of managing multiple layers may outweigh the benefits in smaller or less complex projects. Additionally, if your project does not anticipate significant future growth or if the overhead of maintaining separate layers is prohibitive, exploring alternative architectural styles may be more appropriate.", 
         history: "The n-tier architecture, born from the evolving landscape of software development, originated as a response to the escalating complexity of applications. Its inception can be traced back to the 1970s and 1980s when the need for organized systems prompted researchers to explore layered structures, reminiscent of the OSI model. However, it wasn't until the rise of client-server computing in the late 20th century that the n-tier architecture gained prominence. As businesses increasingly relied on software for automation and data management, developers adopted this structured approach, separating user interfaces, business logic, and data layers into distinct tiers. Initially implemented using monolithic server-side frameworks, the architecture found a new dimension with the advent of web technologies, becoming ubiquitous in web application development. Today, amidst the cloud-native and microservices era, the n-tier architecture continues to evolve, leveraging distributed computing paradigms and containerization for enhanced scalability, flexibility, and resilience. Its enduring legacy underscores its pivotal role in shaping the software development landscape, providing a framework for building robust and adaptable systems that meet the demands of modern business environments.",
         answers: {
-            1: '4.5',
-            2: '6',
-            3: 'medium',
-            4: 'none',
-            5: 'unfamiliar',
-            6: 'no',
+            complexity: '4.5',
+            deadline: '6',
+            scalability: 'medium',
+            resilience_or_total_uptime: 'none',
+            devops: 'unfamiliar',
+            tecnicalUsers: 'no',
         }
     },
 ]
