@@ -5,6 +5,7 @@ import Topbar from '@/components/shareds/Topbar'
 import Bottombar from '@/components/shareds/Bottombar'
 
 import styles from './layout.module.css'
+import FloatingResults from '@/components/shareds/FloatingResults'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           </main>
 
+          <FloatingResults />
           <Bottombar />
         </body>
       </html>

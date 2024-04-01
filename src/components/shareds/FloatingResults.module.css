@@ -1,0 +1,25 @@
+.show__results {
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    z-index: 999;
+    background-color: #FFA500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.show__results a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
