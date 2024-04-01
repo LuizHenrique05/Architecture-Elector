@@ -30,7 +30,7 @@ function orderDevops(devops: string) {
 }
 
 function orderScalability(scalability: string) {
-    const scalability_array = ['low', 'medium', 'high']
+    const scalability_array = ['low', 'medium']
 
     if (scalability_array.indexOf(scalability) !== -1) return scalability_array.slice(0, scalability_array.indexOf(scalability) + 1)
     else return [scalability]
@@ -49,7 +49,7 @@ export async function fetchArchitechtureResult({ complexity, deadline, devops, r
     const filteredData = architechtures.filter(architechture => {
         return (
             parseFloat(complexity) <= parseFloat(architechture.answers.complexity) &&
-            parseFloat(deadline) <= parseFloat(architechture.answers.deadline)  &&
+            parseFloat(deadline) <= parseFloat(architechture.answers.deadline) &&
             scalability_ordered.includes(architechture.answers.scalability) &&
             resilience_or_total_uptime === architechture.answers.resilience_or_total_uptime &&
             devops_ordered.includes(architechture.answers.devops) &&
